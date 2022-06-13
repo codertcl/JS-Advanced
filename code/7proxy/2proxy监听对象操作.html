@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj = {
+        name: '冰冰',
+        age: 31
+    }
+    const objProxy = new Proxy(obj, {
+        get(target, key) {
+            //当前proxy实例
+            // console.log(this)
+            if (!(key in target)) {
+                throw new Error(`${key}属性不存在`)
+            }
+            console.log(`对象的${key}属性被访问`, target)
+            return target[key]
+        },
+        set(target, key, newVal) {
+            console.log(`对象的${key}属性被设置`, target)
+            target[key] = newVal
+        },
+        has(target, key) {
+            console.log(`对象的${key}属性in操作`, target)
+            return key in target
+        }
+    })
+    console.log(objProxy.name)
+    objProxy.name = 1
+    console.log(objProxy.name)
+    console.log(objProxy.age)
+    console.log(objProxy.ae)
+
+    // // var person = {
+    // //     name: "张三"
+    // // };
+    // //
+    // // var proxy = new Proxy(person, {
+    // //     get: function(target, propKey) {
+    // //         if (propKey in target) {
+    // //             return target[propKey];
+    // //         } else {
+    // //             throw new ReferenceError("Prop name \"" + propKey + "\" does not exist.");
+    // //         }
+    // //     }
+    // // });
+    // //
+    // // proxy.name // "张三"
+    // // proxy.age // 抛出一个错误
+    //
+    // // function createArray(...elements) {
+    // //     let handler = {
+    // //         get(target, propKey, receiver) {
+    // //             let index = Number(propKey);
+    // //             if (index < 0) {
+    // //                 propKey = String(target.length + index);
+    // //             }
+    // //             return Reflect.get(target, propKey, receiver);
+    // //         }
+    // //     };
+    // //
+    // //     let target = [];
+    // //     target.push(...elements);
+    // //     return new Proxy(target, handler);
+    // // }
+    // //
+    // // let arr = createArray('a', 'b', 'c');
+    // // arr[-1] // c
+    //
+    // var handler = {
+    //     setPrototypeOf (target, proto) {
+    //         throw new Error('Changing the prototype is forbidden');
+    //     }
+    // };
+    // var proto = {};
+    // var target = function () {};
+    // var proxy = new Proxy(target, handler);
+    // Object.setPrototypeOf(proxy, proto);
+</script>
+</body>
+</html>

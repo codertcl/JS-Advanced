@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const arr = [['name', '冰冰'], ['age', 12]]
+    console.log(Object.fromEntries(arr))
+
+    const queryString = 'name=冰冰&age=31'
+    const queryParams=new URLSearchParams(queryString)
+    console.log(queryParams)
+    console.log(Object.fromEntries(queryParams))
+    for (const queryParam of queryParams) {
+        console.log(queryParam)
+    }
+
+</script>
+</body>
+</html>

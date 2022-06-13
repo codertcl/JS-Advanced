@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const names = ['冰冰', '慧玲', '庄晓莹', NaN]
+    console.log("names.includes(1)" + names.includes(1))//false
+    console.log("names.includes('冰冰')" + names.includes('冰冰'))//TRUE
+    console.log("names.includes('冰冰',1)" + names.includes('冰冰', 1))//flase
+    console.log('names.includes(NaN)' + names.includes(NaN))//flase
+    console.log('names.indexOf(NaN)' + names.indexOf(NaN))//-1 出错
+</script>
+</body>
+</html>

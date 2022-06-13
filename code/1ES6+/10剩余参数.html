@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // rest 参数之后不能再有其他参数（即只能是最后一个参数），否则会报错
+    function f(a,b,...args) {
+        console.log(a,b)
+        //args只包含剩余的参数
+        console.log(args)// [3, 4]
+        //arguments 包含所有参数
+        //Arguments(4) [1, 2, 3, 4, callee: (...), Symbol(Symbol.iterator)]
+        console.log(arguments)
+    }
+    f(1,2,3,4)
+</script>
+</body>
+</html>

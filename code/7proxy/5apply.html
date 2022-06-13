@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f() {
+
+    }
+
+    const fProxy = new Proxy(f, {
+        apply(target, thisArg, argArray) {
+            console.log(target)
+            console.log(thisArg)
+            console.log(argArray)
+            console.log('对f函数进行apply调用')
+            target.apply(thisArg, argArray)
+        },
+        construct(target, argArray, newTarget) {
+            console.log('对f函数进行new调用')
+            console.log(target)
+            console.log(argArray)
+            console.log(newTarget)
+            return new target(...argArray)
+        }
+    })
+    fProxy.apply({}, ['a', 'b'])
+    new fProxy(['c', 'd'])
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj1 = {'name': '冰冰'}
+    const obj2 = {'name': 'zhl'}
+    //对象只能用字符串作为key,其他类型会转换为key
+    const info = {
+        //对象将键转换为字符串
+        obj1: 'a',
+        obj2: 'b',
+        [obj1]: 'a',
+        [obj2]: 'b'
+    }
+    console.log(info)
+
+    const map= new Map([['a','c'],['b','d']])
+    map.set(obj1,'a')
+    map.set(obj2,'b')
+    console.log(map)
+    console.log(map.get('a'))
+    console.log(map.get(obj1))
+    console.log(map.delete(obj1))
+    console.log(map.has(obj1))
+    map.forEach((item,key)=>console.log(key,item))
+    for (let mapElement of map) {
+        console.log(mapElement)
+    }
+</script>
+</body>
+</html>

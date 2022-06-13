@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const name = ['a', 'b', 'c']
+
+    function f(x, y, z) {
+        console.log(x, y, z)
+    }
+
+    //作为数组参数
+    f(...name)
+    f(...name.join(''))
+    //构建新数组
+    const arr = [...name, 'd']
+    console.log(arr)
+
+
+    //展开对象构建新对象
+    const info = {
+        name: '冰冰', age: 31, sex: {
+            sex: '女'
+        }
+    }
+    // 浅拷贝info信息到obj对象中
+    const obj = {...info, address: '吉林'}
+    //浅拷贝
+    obj.sex.sex = '男'
+    console.log(info.sex)//男
+</script>
+</body>
+</html>

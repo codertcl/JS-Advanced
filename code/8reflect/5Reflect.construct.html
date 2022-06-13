@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Student(name, age) {
+        this.name = name
+        this.age = age
+    }
+
+    function Teacher() {
+
+    }
+
+    //Reflect.construct(target, argumentsList[, newTarget])
+    //target 被运行的目标构造函数  argumentsList 类数组，目标构造函数调用时的参数
+    //newTarget 可选 作为新创建对象的原型对象的constructor属性， 参考 new.target 操作符，默认值为target。
+    //调用Student的构造函数创建一个Teacher的实例化对象
+    const teacher = Reflect.construct(Student, ['冰冰', 22], Teacher)
+    console.log(teacher.__proto__ === Teacher.prototype)//true
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj = {
+        name: '冰冰'
+    }
+    let info={
+        age:16
+    }
+    const registry = new FinalizationRegistry((val) => {
+        console.log(`${val}被销毁`)
+    })
+
+    registry.register(obj,'obj')
+    registry.register(info,'age')
+    obj = null
+    info = null
+</script>
+</body>
+</html>

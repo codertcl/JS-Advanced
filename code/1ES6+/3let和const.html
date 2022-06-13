@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name = '冰冰';
+    let age = 31;
+    const sex = '女'
+    const obj = {
+        name, age, sex
+    }
+    window.message='哈哈哈'
+    console.log(message)
+    //冰冰 31 女
+    console.log(name, age, sex)
+    //冰冰 undefined undefined
+    console.log(window.name, window.age, window.sex)
+
+    //2:const 为基本类型则不能修改值
+    //若为对象类型，其引用地址不能修改 但其引用地址指向的值可以修改
+    obj.sex = '男'
+    ////Uncaught TypeError: Assignment to constant variable.
+    // sex = '男'
+
+
+    //3:重复定义问题
+    //var 类型可以重复定义 let不可以
+    var name = '慧玲';
+    console.log(name)
+    //Uncaught SyntaxError: Identifier 'age' has already been declared
+    // let age=22
+    // console.log(age)0[;//
+
+
+    ////4:作用域提升
+    console.log(a)//undefined
+    var a = 1
+
+    //Uncaught ReferenceError: Cannot access 'b' before initialization
+    // console.log(b)
+    // let b=2
+</script>
+</body>
+</html>

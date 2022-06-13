@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 参数长度只计算最开始的无默认值参数的个数
+    function f(z, m = 'a', n = 'b') {
+        console.log(z, m, n)
+    }
+
+    console.log(f.length)//1
+</script>
+</body>
+</html>

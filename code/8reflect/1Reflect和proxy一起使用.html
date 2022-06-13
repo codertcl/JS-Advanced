@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj = {
+        name: '冰冰',
+        age: 31
+    }
+
+    const objProxy = new Proxy(obj, {
+        get(target, p, receiver) {
+            console.log('get-------------')
+            return Reflect.get(target, p)
+        },
+        set(target, p, value, receiver) {
+            console.log('set-------------')
+            //Reflect.set(target, p, value)返回布尔值
+            console.log(Reflect.set(target, p, value));
+        }
+    })
+    objProxy.name = '慧玲'
+    console.log(objProxy.name)
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //封装一个响应式函数
+    const obj = {
+        name: '冰冰',
+        age: 31
+    }
+
+    //存储要响应执行的函数
+    let reactiveFuns = []
+
+    function watchFn(fn) {
+        reactiveFuns.push(fn)
+    }
+
+    watchFn(function f1() {
+        console.log('响应式函数1')
+    })
+    watchFn(function f2() {
+        console.log('响应式函数2')
+    })
+
+    //执行每一个需要执行的函数
+    reactiveFuns.forEach(fun => {
+        fun()
+    })
+</script>
+</body>
+</html>

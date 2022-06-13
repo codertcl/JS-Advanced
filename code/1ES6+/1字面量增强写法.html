@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name = '冰冰', age = 22;
+    var obj = {
+        name:name,
+        //属性简写
+        age,
+        getAge: function () {
+            return age
+        },
+        //方法简写
+        getName(){
+            return name
+        },
+        //计算属性简写
+        [name + 123]: '慧玲',
+    }
+    console.log(obj)
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const set = new Set([1, 2, 14, 1, 2])
+    console.log(set.size)
+    console.log(set.has(1))
+    console.log(set.has(100))
+    console.log(set.delete(1));
+    console.log(set.delete(11));
+    set.clear()
+    console.log(set.size)
+    set.add(1)
+    set.add(2)
+    set.add(3)
+    for (let number of set) {
+        console.log(number)
+    }
+
+    set.forEach(item=>console.log(item))
+    //由于 Set 结构没有键名，只有键值（或者说键名和键值是同一个值）
+    //所以keys方法和values方法的行为完全一致
+    console.log(set.keys())
+    console.log(set.values())
+    console.log(set.entries())
+    //set.entries() 为对象 其内部每个元素为数组 两个元素都是set中元素的值
+    console.log(typeof set.entries())
+    //
+    for (let number of set.entries()) {
+        console.log(number,Array.isArray(number))
+    }
+
+    //Set 结构的实例默认可遍历，它的默认遍历器生成函数就是它的values方法。
+    console.log(Set.prototype[Symbol.iterator] === Set.prototype.values)
+    for (let x of new Set(['red', 'green', 'blue'])) {
+        console.log(x);
+    }
+
+    let set1 = new Set([1, 2, 3]);
+    set1 = new Set([...set1].map(x => x * 2));
+
+    // 返回Set结构：{2, 4, 6}
+
+    let set2 = new Set([1, 2, 3, 4, 5]);
+    set2 = new Set([...set2].filter(x => (x % 2) == 0));
+</script>
+</body>
+</html>

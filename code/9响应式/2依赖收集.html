@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //封装一个响应式函数
+    const obj = {
+        name: '冰冰',
+        age: 31
+    }
+
+    //依赖收集类
+    class Depend {
+        constructor() {
+            this.reactiveFns = []
+        }
+
+        addDepend(fn) {
+            this.reactiveFns.push(fn)
+        }
+
+        notify() {
+            //执行每一个需要执行的函数
+            this.reactiveFns.forEach(fun => {
+                fun()
+            })
+        }
+    }
+
+    const dep = new Depend()
+    dep.addDepend(function f1() {
+        console.log('响应式函数1')
+    })
+    dep.addDepend(function f2() {
+        console.log('响应式函数2')
+    })
+    dep.notify()
+</script>
+</body>
+</html>

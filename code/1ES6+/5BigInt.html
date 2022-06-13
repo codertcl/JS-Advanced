@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(Number.MAX_SAFE_INTEGER)
+    //true
+    console.log(Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2)
+
+    // BigInt 数字后添加n
+    const a = 2172141653n;
+    const b = 15346349309n;
+
+    // BigInt 可以保持精度
+    console.log(a * b); // 33334444555566667777n
+
+    // 普通整数无法保持精度
+    console.log(Number(a) * Number(b)); // 33334444555566670000
+
+
+   // BigInt 与普通整数是两种值，它们之间并不相等。
+    console.log(42n === 42) // false
+    console.log(typeof 123n); // 'bigint'
+
+    let p = 1n;
+    for (let i = 1n; i <= 70n; i++) {
+        p *= i;
+    }
+    console.log(p); // 11978571...00000000n
+
+    console.log(BigInt(123)); // 123n
+    console.log(BigInt('123')); // 123n
+    console.log(BigInt(false)); // 0n
+    console.log(BigInt(true)); // 1n
+
+    //参数如果是小数，也会报错。
+    //BigInt(1.5) // RangeError
+    // BigInt('1.5') // SyntaxError
+
+</script>
+</body>
+</html>

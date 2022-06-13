@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f({name, age} = {name: '冰冰', age: 31}) {
+        console.log(name, age)
+    }
+
+    f()
+    f({name: '慧玲', age: 22})
+</script>
+</body>
+</html>

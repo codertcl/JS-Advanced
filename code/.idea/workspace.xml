@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5b50d1b-492f-4806-b8ef-bc502dd47226" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="21DeOX5zECGQonlzmoRx1WJCP36" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="idea.background.editor" value="D:\Users\admin\AppData\Local\Programs\Microsoft VS Code\background\2_4k.jpg,24,scale,center" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/proxy" />
+    <property name="settings.editor.selected.configurable" value="background.image.plus" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.13symbol基本使用.html">
+    <configuration name="10剩余参数.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ES6/10剩余参数.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="11展开运算符.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ES6/11展开运算符.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="12数值表示.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ES6/12数值表示.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="13symbol基本使用.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ES6/13symbol基本使用.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="9有默认值参数函数的length属性.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ES6/9有默认值参数函数的length属性.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.13symbol基本使用.html" />
+        <item itemvalue="JavaScript Debug.12数值表示.html" />
+        <item itemvalue="JavaScript Debug.11展开运算符.html" />
+        <item itemvalue="JavaScript Debug.10剩余参数.html" />
+        <item itemvalue="JavaScript Debug.9有默认值参数函数的length属性.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5b50d1b-492f-4806-b8ef-bc502dd47226" name="默认更改列表" comment="" />
+      <created>1637480053057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637480053057</updated>
+      <workItem from="1637480054523" duration="5748000" />
+      <workItem from="1637500408277" duration="104000" />
+      <workItem from="1637500530786" duration="555000" />
+      <workItem from="1637501184644" duration="7627000" />
+      <workItem from="1637746834532" duration="570000" />
+      <workItem from="1637804872195" duration="15401000" />
+      <workItem from="1637984746254" duration="2091000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="57" key="FileChooserDialogImpl" timestamp="1637995303392">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="458" y="57" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1637995303392" />
+    <state x="10" y="0" key="SettingsEditor" timestamp="1637502335471">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="10" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1637502335471" />
+    <state x="341" y="190" width="788" height="344" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1637502125178">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="341" y="190" width="788" height="344" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.680@0.0.1280.680" timestamp="1637502125178" />
+    <state x="219" y="0" width="840" height="678" key="search.everywhere.popup" timestamp="1637835215083">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="219" y="0" width="840" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1637835215083" />
+  </component>
+</project>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let [, name, age] = [, '冰冰', 22]
+    console.log(name, age)//'冰冰', 22
+
+    //部分元素放到数组中
+    let [, ...info] = [, '冰冰', 22]
+    console.log(info)//['冰冰', 22]
+
+    //解构默认值
+    var [item1, item2 = 2] = ['a']
+    console.log(item1, item2)//a  2
+
+
+    //对象解构
+    var obj = {
+        age1: 22, name1: '冰冰',
+    }
+
+    //按照字段名一一对应
+    var {name1, age1} = obj
+    console.log(name1, age1)//'冰冰', 22
+
+    //重命名属性名 并添加默认值
+    var {name1: newName, age1: newAge, address: newAddress = '武汉'} = obj
+    console.log(newName, newAge, newAddress)//冰冰 22 武汉
+
+
+    // 对象解构的应用
+    function f({name1, age1}) {
+        console.log(name1, age1)
+    }
+
+    ////不使用解构写法
+    // function f(info) {
+    // console.log(info.name1, info.age1)
+    // }
+
+    f(obj)
+</script>
+</body>
+</html>

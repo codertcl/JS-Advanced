@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj = {
+        _name: "why",
+        get name() {
+            //此处this为传入的receiver
+            console.log(this)
+            return this._name
+        },
+        set name(newValue) {
+            console.log(this)
+            this._name = newValue
+        }
+    }
+
+    const objProxy = new Proxy(obj, {
+        get: function(target, key, receiver) {
+            // receiver是创建出来的代理对象 等于objProxy
+            console.log("get方法被访问--------", key, receiver)
+            // console.log(receiver === objProxy)
+            return Reflect.get(target, key, receiver)
+        },
+        set: function(target, key, newValue, receiver) {
+            console.log("set方法被访问--------", key)
+            Reflect.set(target, key, newValue, receiver)
+        }
+    })
+
+    console.log(objProxy.name)
+    objProxy.name = "kobe"
+</script>
+</body>
+</html>

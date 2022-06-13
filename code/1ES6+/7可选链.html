@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj = {
+        name: '甲',
+        // friend: {
+        //     name: '冰冰',
+        //     boyfriend: {
+        //         name: 'sxy'
+        //     }
+        // }
+    }
+
+    //当obj不存在friend属性时，下面会报错
+    //Uncaught TypeError: Cannot read properties of undefined (reading 'boyfriend')
+    // console.log(obj.friend.boyfriend.name)
+    //使用&&运算符 当obj.friend.boyfriend.name属性不存在时会输出undefined
+    console.log(obj && obj.friend && obj.friend.boyfriend && obj.friend.boyfriend.name)
+    // 使用可选链
+    // 操作符检查 ?. 会检查操作符左边的值是否为 null 或 undefined。
+    // 如果是，这个表达式就终止然后返回 undefined。否则，这个表达式继续执行检查通过!
+    console.log(obj?.friend?.boyfriend?.name)
+</script>
+</body>
+</html>

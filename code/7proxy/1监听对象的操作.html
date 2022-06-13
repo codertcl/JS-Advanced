@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj = {
+        name: '冰冰',
+        age: 31
+    }
+    Object.keys(obj).forEach(key => {
+        let val = obj[key]
+        Object.defineProperty(obj, key, {
+            set(v) {
+                console.log(`obj的${key}被设置`)
+                val = v
+            },
+            get() {
+                console.log(`obj的${key}被访问`)
+                return val
+            }
+        })
+    })
+    console.log(obj.name)
+    obj.name = '1'
+    console.log(obj.name)
+</script>
+</body>
+</html>

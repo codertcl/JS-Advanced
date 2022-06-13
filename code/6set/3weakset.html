@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let weakset = new WeakSet()
+    ////Uncaught TypeError: Invalid value used in weak set at WeakSet.add
+    //weakset.add(1)
+    const obj = {
+        name: '冰冰',
+        age: 21
+    }
+    weakset.add(obj)
+    console.log(weakset)
+
+    const pwset = new WeakSet()
+
+    class Person {
+        constructor() {
+            pwset.add(this)
+        }
+
+        running() {
+            if (!pwset.has(this))
+                throw new Error("不能通过其他对象调用running方法")
+            console.log("running", this)
+        }
+    }
+
+    let p = new Person()
+    p.running()
+    p.running.call({name: '冰冰'})
+    //数组pwset对实例的引用不会被计入内存回收机制，所以删除实例时无需考虑pwset，也不会出现内存泄露
+    //将p置为空 则没有指向pwset的引用，pwset会被清空
+    p = null
+
+</script>
+</body>
+</html>

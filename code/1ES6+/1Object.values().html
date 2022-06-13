@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj={
+        name:'冰冰'
+    }
+    console.log(Object.values(obj))
+    console.log(Object.keys(obj))
+    console.log(Object.entries(obj))
+
+    console.log(Object.values([1,1,2,3]))
+    console.log(Object.values('aaaa'))
+    console.log(Object.values(42)); // []
+    console.log(Object.values(true)); // []
+
+    console.log(Object.fromEntries([
+        ['foo', 'bar'],
+        ['baz', 42]
+    ]));
+</script>
+</body>
+</html>

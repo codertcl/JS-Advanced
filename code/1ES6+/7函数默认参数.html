@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // es6之前默认值写法
+    function f(m, n) {
+        //参数为0或者FALSE 会有bug
+        m = m || 'a'
+        n = n || 'b'
+        console.log(m, n)
+    }
+
+    // es6设置默认值
+    // 有默认值参数最好放到最后，在省略了参数时可以使用到默认值
+    function f1(z,m = 'a', n = 'b') {
+        console.log(z,m, n)
+    }
+
+    f(1)
+    f(0)//'a' 'b'
+    f(false)//'a' 'b'
+    f1(0)//'a' 'b'
+    f1(false)//'a' 'b'
+</script>
+</body>
+</html>

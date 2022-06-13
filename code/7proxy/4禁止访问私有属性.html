@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const obj = {
+        name: '冰冰',
+        _age: 31
+    }
+    const objProxy = new Proxy(obj, {
+        get(target, key) {
+            //当前proxy实例
+            // console.log(this)
+            if (key.includes('_')) {
+                throw new Error(`${key}属性不能访问`)
+            } else {
+                console.log(`对象的${key}属性被访问`, target)
+                return target[key]
+            }
+        },
+    })
+
+    console.log(objProxy.name)
+    console.log(objProxy._age)
+</script>
+</body>
+</html>
