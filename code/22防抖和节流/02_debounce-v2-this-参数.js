@@ -8,7 +8,7 @@ function debounce(fn, delay) {
     if (timer) clearTimeout(timer)
     // 延迟执行
     timer = setTimeout(() => {
-      // 外部传入的真正要执行的函数
+      // 外部传入的真正要执行的函数 此时this指向了input，不apply则this指向window
       fn.apply(this, args)
     }, delay)
   }

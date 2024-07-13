@@ -28,19 +28,19 @@
     //// 防抖处理
     ////1:underscore实现防抖
     // inputEl.oninput = _.debounce(inputChange, 1000)
-    ////2:基本实现fn未传入参数
+    //2:基本实现fn未传入参数
     // inputEl.oninput = debounce(inputChange, 1000)
 
-    // //3:是否立即执行 true表示立即执行 没传或者为false表示不需要立即执行
-    // const debounceChange = debounce(inputChange, 1000, true)
-    // inputEl.oninput = debounceChange
-    //
-    // 4:取消功能
+    //3:是否立即执行 true表示立即执行 没传或者为false表示不需要立即执行
     const debounceChange = debounce(inputChange, 1000, true)
-    const cancelBtn = document.querySelector("#cancel")
-    cancelBtn.onclick = function () {
-        debounceChange.cancel()
-    }
+    inputEl.oninput = debounceChange
+    //
+    // // 4:取消功能
+    // const debounceChange = debounce(inputChange, 1000, true)
+    // const cancelBtn = document.querySelector("#cancel")
+    // cancelBtn.onclick = function () {
+    //     debounceChange.cancel()
+    // }
 
     ////5:函数返回值
     ////5.1回调函数获取返回值
@@ -49,12 +49,12 @@
     // })
 
     ////5.2 Promise.resolve(返回值)
-    const tempCallback = () => {
-        debounceChange().then(res => {
-            console.log("Promise的返回值结果:", res)
-        })
-    }
-    inputEl.oninput = tempCallback
+    // const tempCallback = () => {
+    //     debounceChange().then(res => {
+    //         console.log("Promise的返回值结果:", res)
+    //     })
+    // }
+    // inputEl.oninput = tempCallback
 </script>
 </body>
 </html>

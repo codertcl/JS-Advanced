@@ -1,10 +1,9 @@
-function throttle(fn, interval, options) {
+function throttle(fn, interval, ...args) {
     // 1.记录上一次的开始时间
     let lastTime = 0
 
     // 2.事件触发时, 真正执行的函数
-    const _throttle = function (inputChange, number) {
-
+    return function () {
         // 2.1.获取当前事件触发时的时间
         const nowTime = new Date().getTime()
 
@@ -12,10 +11,9 @@ function throttle(fn, interval, options) {
         const remainTime = interval - (nowTime - lastTime)
         if (remainTime <= 0) {
             // 2.3.真正触发函数
-            fn()
+            fn(...args)
             // 2.4.保留上次触发的时间
             lastTime = nowTime
         }
     }
-    return _throttle
 }

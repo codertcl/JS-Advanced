@@ -11,14 +11,14 @@
 <input type="text">
 <button id="cancel">取消</button>
 
-<!--  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
 <!--<script src="./06_throttle-v1-基本实现.js"></script>-->
 <!--<script src="./07_throttle-v2-leading实现.js"></script>-->
 <!-- <script src="./08_throttle-v3-trailing实现.js"></script>-->
 <!-- <script src="./09_throttle-v4-this-参数.js"></script>-->
 <!--<script src="./10_throttle-v5-取消功能.js"></script>-->
 <!--<script src="./11_throttle-v6-函数返回值.js"></script>-->
-<script src="./12_throttle-v7-函数返回Promise对象.js"></script>
+<!--<script src="./12_throttle-v7-函数返回Promise对象.js"></script>-->
 <script>
     const inputEl = document.querySelector("input")
     let counter = 0
@@ -28,40 +28,40 @@
     }
 
     // 1:基本实现节流处理
-    // inputEl.oninput = throttle(inputChange, 1000)
+    // inputEl.oninput = throttle(inputChange, 1000, 1, 2)
 
     // 2:leading和trailing控制初始是否触发 3 4 5取消
-    // const _throttle = throttle(inputChange, 2000, {
-    //     leading: true,
-    //     trailing: true
-    // })
-    // inputEl.oninput = _throttle
-
-    //v6函数返回值
-    const _throttle = throttle(inputChange, 1000, {
-        leading: false,
-        trailing: true,
-        resultCallback: function (res) {
-            console.log("resultCallback:", res)
-        }
+    const _throttle = throttle(inputChange, 2000, {
+        leading: true,
+        trailing: true
     })
-
-    ////v-7 返回Promise
-    const tempCallback = (...args) => {
-        // console.log(args) //event事件对象
-        _throttle.apply(inputEl, args).then(res => {
-            console.log("Promise:", res)
-        })
-    }
-    inputEl.oninput = tempCallback
-
-    // inputEl.oninput = _throttle
-
-    // 取消功能
-    const cancelBtn = document.querySelector("#cancel")
-    cancelBtn.onclick = function () {
-        _throttle.cancel()
-    }
+    inputEl.oninput = _throttle
+    //
+    // //v6函数返回值
+    // const _throttle = throttle(inputChange, 1000, {
+    //     leading: false,
+    //     trailing: true,
+    //     resultCallback: function (res) {
+    //         console.log("resultCallback:", res)
+    //     }
+    // })
+    //
+    // ////v-7 返回Promise
+    // const tempCallback = (...args) => {
+    //     // console.log(args) //event事件对象
+    //     _throttle.apply(inputEl, args).then(res => {
+    //         console.log("Promise:", res)
+    //     })
+    // }
+    // inputEl.oninput = tempCallback
+    //
+    // // inputEl.oninput = _throttle
+    //
+    // // 取消功能
+    // const cancelBtn = document.querySelector("#cancel")
+    // cancelBtn.onclick = function () {
+    //     _throttle.cancel()
+    // }
 </script>
 
 </body>
