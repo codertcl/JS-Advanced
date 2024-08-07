@@ -1,6 +1,8 @@
 const s1 = Symbol()
 const s2 = Symbol()
 
+const map = new Map();
+map.set('a', 1111)
 const obj = {
     name: "why",
     friend: {
@@ -22,7 +24,8 @@ const obj = {
     nan: NaN,//null
     inf: Infinity,//null
     set: new Set(["aaa", "bbb", "ccc"]),
-    map: new Map([["aaa", "abc"], ["bbb", "cba"]]),
+    map: map,
+    map1: new Map([["aaa", "abc"], ["bbb", "cba"]]),
     err: new Error('error message'),//{}
 }
 
@@ -81,11 +84,10 @@ function deepClone(originValue) {
     return newObject
 }
 
-debugger
-const newObj = deepClone({[s1]:'a'})
-console.log(newObj === obj)
+// const newObj = deepClone({[s1]:'a'})
+// console.log(newObj === obj)
 
-console.log(newObj)
+console.log(deepClone(obj))
 
 // //instanceof function () {} //报错
 // //instanceof Symbol()//报错

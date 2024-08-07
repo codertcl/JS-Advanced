@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="092930b1-f7dd-415b-b04a-850a37a9b948" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/22防抖和节流/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/22防抖和节流/06_throttle-v1-基本实现.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/22防抖和节流/06_throttle-v1-基本实现.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/23_深拷贝-事件总线/03_实现深拷贝函数v2-其他类型.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/23_深拷贝-事件总线/03_实现深拷贝函数v2-其他类型.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/37_深拷贝-事件总线/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/37_深拷贝-事件总线/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/37_深拷贝-事件总线/.idea/modules.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2k2OReS2wtxRDSM7W2SmXwK4W94" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.00_递归深拷贝(循环引用).js.executor": "Run",
+    "Node.js.03_实现深拷贝函数v2-其他类型.js.executor": "Run",
+    "Node.js.1.js (1).executor": "Run",
+    "Node.js.1.js.executor": "Run",
+    "Node.js.8Proxy.apply.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/mima0000/Desktop/code/刷题/JS-Advanced",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Node.js.03_实现深拷贝函数v2-其他类型.js">
+    <configuration name="00_递归深拷贝(循环引用).js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/code/23_深拷贝-事件总线/00_递归深拷贝(循环引用).js" working-dir="$PROJECT_DIR$/code/23_深拷贝-事件总线">
+      <method v="2" />
+    </configuration>
+    <configuration name="03_实现深拷贝函数v2-其他类型.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/code/23_深拷贝-事件总线/03_实现深拷贝函数v2-其他类型.js" working-dir="$PROJECT_DIR$/code/23_深拷贝-事件总线">
+      <method v="2" />
+    </configuration>
+    <configuration name="1.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/1.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/code/22防抖和节流/1.js" working-dir="$PROJECT_DIR$/code/22防抖和节流">
+      <method v="2" />
+    </configuration>
+    <configuration name="8Proxy.apply.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/code/7proxy/8Proxy.apply.js" working-dir="$PROJECT_DIR$/code/7proxy">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.03_实现深拷贝函数v2-其他类型.js" />
+        <item itemvalue="Node.js.1.js (1)" />
+        <item itemvalue="Node.js.00_递归深拷贝(循环引用).js" />
+        <item itemvalue="Node.js.1.js" />
+        <item itemvalue="Node.js.8Proxy.apply.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="092930b1-f7dd-415b-b04a-850a37a9b948" name="更改" comment="" />
+      <created>1722478197946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722478197946</updated>
+      <workItem from="1722478200273" duration="4192000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
