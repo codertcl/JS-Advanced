@@ -2,5 +2,5 @@
 // 在全局作用域下
 // 浏览器: window(globalObject)
 // Node环境: {}
-console.log(this)
-// console.log(window)
+console.log(this) // {}
+console.log(window) // ReferenceError: window is not defined

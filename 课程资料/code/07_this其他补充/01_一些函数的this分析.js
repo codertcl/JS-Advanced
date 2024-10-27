@@ -2,36 +2,23 @@
 // function hySetTimeout(fn, duration) {
 //   fn.call("abc")
 // }
-
+//
 // hySetTimeout(function() {
-//   console.log(this) // window
-// }, 3000)
-
+//   console.log(this) // [String: 'abc'] "abc"包装为String对象类型
+// }, 300)
+//
 // setTimeout(function() {
 //   console.log(this) // window
-// }, 2000)
+// }, 200)
 
-// 2.监听点击
-const boxDiv = document.querySelector('.box')
-boxDiv.onclick = function() {
-  console.log(this)
-}
-
-boxDiv.addEventListener('click', function() {
-  console.log(this)
-})
-boxDiv.addEventListener('click', function() {
-  console.log(this)
-})
-boxDiv.addEventListener('click', function() {
-  console.log(this)
-})
-
-// 3.数组.forEach/map/filter/find
-var names = ["abc", "cba", "nba"]
+// 3.数组.forEach/map/filter/find(callback, this)
+var names = ["abc"]
+// 如果 callbackFn 是非严格模式，原始 this 值将被包装为对象
 names.forEach(function(item) {
+  // this指向第二个参数包装后的String对象 字符串111
   console.log(item, this)
-}, "abc")
+}, "111")
 names.map(function(item) {
+  // 没有设置第二个参数，则this指向全局对象
   console.log(item, this)
-}, "cba")
+})
